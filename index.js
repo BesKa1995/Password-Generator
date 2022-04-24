@@ -35,10 +35,14 @@ clipboardEl.addEventListener('click', () => {
   textarea.remove()
 })
 function generatePasswor(lower, upper, number, symbol, length) {
+
   var generatePasswor = ''
 
   const typesCount = lower + upper + number + symbol
 
+  if (typesCount === 0) {
+    return ''
+  }
   const typesArr = [{ lower }, { upper }, { symbol }, { number }]
     .filter(item => Object.values(item)[0] === true)
 
