@@ -60,20 +60,27 @@ function generatePasswor(lower, upper, number, symbol, length) {
 }
 
 
+const uppercaseStartCode = 65
+const lowercaseStartCode = 97
+const numberStartCode = 97
+
+const enLettersQuantity = 26
+const digitsQunatity = 10
 
 
 function getRandomUpper() {
-  return String.fromCharCode(Math.floor(Math.random() * 26) + 64)
+
+  return String.fromCharCode(Math.floor(Math.random() * enLettersQuantity) + uppercaseStartCode)
 }
 
 
 
 function getRandomLower() {
-  return String.fromCharCode(Math.floor(Math.random() * 26) + 97)
+  return String.fromCharCode(Math.floor(Math.random() * enLettersQuantity) + lowercaseStartCode)
 }
 
 function getRandomNumber() {
-  return String.fromCharCode(Math.floor(Math.random() * 10) + 48)
+  return String.fromCharCode(Math.floor(Math.random() * digitsQunatity) + numberStartCode)
 }
 
 function getRandomSymbols() {
