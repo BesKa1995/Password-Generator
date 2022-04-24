@@ -7,6 +7,8 @@ const numbersEl = document.getElementById('numbers')
 const symbolsEl = document.getElementById('symbols')
 const generateEl = document.getElementById('generate')
 
+
+//for looping to generate random character on each iteration
 const randomFunc = {
   lower: getRandomLower,
   upper: getRandomUpper,
@@ -15,6 +17,8 @@ const randomFunc = {
 }
 
 generateEl.addEventListener('click', () => {
+
+
   let length = parseInt(lengthEl.value)
   const hasLower = lowercaseEl.checked
   const hasUpper = uppercaseEl.checked
@@ -28,6 +32,8 @@ generateEl.addEventListener('click', () => {
 clipboardEl.addEventListener('click', () => {
   const textarea = document.createElement('textarea')
   const password = resultEl.innerHTML
+
+  //if password is empty then copying doesn't happen
   if (!password) { return }
 
 
@@ -41,14 +47,20 @@ function generatePasswor(lower, upper, number, symbol, length) {
 
   var generatePasswor = ''
 
+
   const typesCount = lower + upper + number + symbol
 
+  //if typesCount is zero doesn't happen password generation logic because of infinite loop
   if (typesCount === 0) {
     return ''
   }
+
+  //getting filtered types. selected only those that were checked on checkboxes
   const typesArr = [{ lower }, { upper }, { symbol }, { number }]
     .filter(item => Object.values(item)[0] === true)
 
+  
+  //
   for (let i = 0; i < length; i += typesCount) {
     typesArr.forEach(type => {
       const funcName = Object.keys(type)[0]
