@@ -1,5 +1,90 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat");
+html {
+  font-size: 0.625rem;
+}
+
 body {
-  font-family: 'Roboto', sans-serif;
+  background-color: #3b3b98;
+  color: #fff;
+  font-size: 1.6rem;
+  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin: 0;
+}
+
+.container {
+  background-color: #23235b;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
+  width: 35rem;
+}
+
+.btn {
+  background-color: #3b3b98;
+  border: 0;
+  color: white;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+}
+
+.result-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1.5rem;
+  position: relative;
+  font-size: 1.8rem;
+}
+
+.result-container #result {
+  padding: inherit;
+}
+
+.result-container #clipboard {
+  position: absolute;
+  top: .6rem;
+  right: .5rem;
+  font-size: 2rem;
+  width: 4rem;
+  height: 4rem;
+  padding: .5rem;
+}
+
+.result-container #clipboard:active {
+  transform: scale(0.98);
+}
+
+.btn-large {
+  display: block;
+  width: 100%;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  padding: 1.3rem;
+  font-weight: 600;
+}
+
+.btn-large:active {
+  transform: scale(0.98);
+}
+
+.setting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.4rem 0;
+  font-size: 1.4rem;
+}
+
+.setting #length {
+  background-color: #3b3b98;
+  color: #fff;
+  padding: .5rem 1rem;
+  font-size: 1.5rem;
+}
+
+.setting #length:focus {
+  outline: none;
 }
 /*# sourceMappingURL=style.css.map */
